@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+:global(body) {
+    font-family: Montserrat, sans-serif;
+}
