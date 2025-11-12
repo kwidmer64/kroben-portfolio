@@ -25,7 +25,8 @@
 </script>
 
 <style>
-		:global(.link-hovered) {
+		/*noinspection CssUnusedSymbol*/
+    :global(.link-hovered) {
 				opacity: 1 !important;
 		}
 
