@@ -34,7 +34,6 @@
         transition: opacity 0.2s;
         height: 30%;
         width: 100%;
-        transform: scale(var(--link-block-scale));
         background-color: #2696e1;
         position: absolute;
         bottom: 0.25rem;
