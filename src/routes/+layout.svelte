@@ -50,7 +50,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<nav class="h-20 flex justify-between">
+<nav class="h-20 flex justify-between relative top-0 z-10">
 	<a href="/" class="w-1/2 text-3xl font-bold h-full flex items-center justify-start pl-7 lg:pl-20">KW</a>
 	<!-- Desktop Nav -->
 	<div class="w-4xl flex justify-around items-center z-0">

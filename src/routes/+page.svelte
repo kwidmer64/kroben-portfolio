@@ -1,7 +1,9 @@
 <script lang="ts">
+	// import pfp image
 	import pfp from '$lib/assets/pfp.jpg';
 	import { onMount } from 'svelte';
 
+	// helper function to get the center of an HTMLElement
 	function getCenterOfElement(el: HTMLElement) {
 		const boundingBox = el.getBoundingClientRect();
 		const centerX = boundingBox.left + boundingBox.width / 2;
@@ -37,6 +39,34 @@
 		};
 	});
 
+	// import tsparticles
+	import { tsParticles } from '@tsparticles/engine';
+	import { loadStarsPreset } from '@tsparticles/preset-stars';
+
+	// this is called an Immediately Invoked Function Expression (IIFE)
+	// surrounding the function in parentheses ( ... ) turns it into a function expression
+	// and adding (); to the end invokes the function immediately
+	(async () => {
+		await loadStarsPreset(tsParticles);
+	})();
+
+	// run the tsParticles.load function when this component is mounted
+	// this attaches tsParticles to the tsParticles div
+	onMount(() => {
+
+		let options = {
+			preset: "stars", // loads the stars preset
+			background: {
+				opacity: 0 // makes the background transparent
+			}
+		}
+
+		tsParticles.load({
+			id: "tsParticles",
+			options: options
+		});
+	});
+
 </script>
 
 <style>
@@ -46,7 +76,7 @@
 </style>
 
 <!-- bind:this sets a reference of this DOM element (heroContent div) to the provided variable (mainContainer)-->
-<div id="heroContent" bind:this={mainContainer} class="flex justify-center items-center gap-5 mx-auto pt-80">
+<div id="heroContent" bind:this={mainContainer} class="flex justify-center items-center gap-5 mx-auto pt-80 relative z-10">
 	<div class="min-w-0 flex justify-end">
 		<!-- Image goes here	-->
 		<img class="w-sm" src={pfp} alt="Korben" />
@@ -56,3 +86,5 @@
 		<h2 class="text-4xl">A software developer from <br /><b>New Jersey.</b></h2>
 	</div>
 </div>
+
+<div id="tsParticles" class="w-full h-screen absolute top-0"></div>
