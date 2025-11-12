@@ -39,6 +39,12 @@
 
 </script>
 
+<style>
+	#heroContent {
+			transition: transform 0.5s ease-out;
+	}
+</style>
+
 <!-- bind:this sets a reference of this DOM element (heroContent div) to the provided variable (mainContainer)-->
 <div id="heroContent" bind:this={mainContainer} class="flex justify-center items-center gap-5 mx-auto pt-80">
 	<div class="min-w-0 flex justify-end">
