@@ -8,8 +8,9 @@
 
 	function handleNavHover(event: MouseEvent) {
 		const hovered = event.currentTarget as HTMLElement;
-		const sibling = hovered.nextElementSibling;
+		const sibling = hovered.nextElementSibling; // returns the element immediately following the current one in the parent's children list
 
+		// check for truthy value (sibling exists and nextElementSibling did not return null)
 		if (sibling) {
 			sibling.classList.toggle("link-hovered");
 		}
@@ -24,7 +25,8 @@
 </script>
 
 <style>
-		:global(.link-hovered) {
+		/*noinspection CssUnusedSymbol*/
+    :global(.link-hovered) {
 				opacity: 1 !important;
 		}
 
@@ -33,7 +35,6 @@
         transition: opacity 0.2s;
         height: 30%;
         width: 100%;
-        transform: scale(var(--link-block-scale));
         background-color: #2696e1;
         position: absolute;
         bottom: 0.25rem;
@@ -49,7 +50,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<nav class="h-20 flex justify-between">
+<nav class="h-20 flex justify-between relative top-0 z-10">
 	<a href="/" class="w-1/2 text-3xl font-bold h-full flex items-center justify-start pl-7 lg:pl-20">KW</a>
 	<!-- Desktop Nav -->
 	<div class="w-4xl flex justify-around items-center z-0">
