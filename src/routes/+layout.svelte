@@ -8,8 +8,9 @@
 
 	function handleNavHover(event: MouseEvent) {
 		const hovered = event.currentTarget as HTMLElement;
-		const sibling = hovered.nextElementSibling;
+		const sibling = hovered.nextElementSibling; // returns the element immediately following the current one in the parent's children list
 
+		// check for truthy value (sibling exists and nextElementSibling did not return null)
 		if (sibling) {
 			sibling.classList.toggle("link-hovered");
 		}

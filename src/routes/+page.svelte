@@ -9,10 +9,13 @@
 		return {x: centerX, y: centerY};
 	}
 
-	let mainContainer: HTMLElement;
+	let mainContainer: HTMLDivElement; // empty variable of HTMLDivElement type that will be assigned a reference using bind:this on the element itself
 	const PARALLAX_AMOUNT = 35; // Higher is less movement
 
+	// onMount is a lifecycle hook that schedules a callback function to run as soon as the component (this file in this case) is inserted (mounted) to the DOM.
+	// () => {} is the callback declaration
 	onMount(() => {
+		// local function that is scoped to this particular component
 		function handleMouseMovement(event: MouseEvent) {
 			const mouseX = event.clientX;
 			const mouseY = event.clientY;
@@ -22,8 +25,13 @@
 
 		}
 
+		// attaches the handleMouseMovement function to the mousemove event.
+		// handleMouseMovement will be called everytime the mousemove event is triggered.
 		document.addEventListener("mousemove", handleMouseMovement);
 
+		// return a callback/cleanup function.
+		// this is run when this component is destroyed/unmounted.
+		// not returning a cleanup function would result in the event listener sticking around after the component is destroyed
 		return () => {
 			document.removeEventListener("mousemove", handleMouseMovement);
 		};
@@ -31,6 +39,7 @@
 
 </script>
 
+<!-- bind:this sets a reference of this DOM element (heroContent div) to the provided variable (mainContainer)-->
 <div id="heroContent" bind:this={mainContainer} class="flex justify-center items-center gap-5 mx-auto pt-80">
 	<div class="min-w-0 flex justify-end">
 		<!-- Image goes here	-->
