@@ -76,7 +76,7 @@
 </style>
 
 <!-- bind:this sets a reference of this DOM element (heroContent div) to the provided variable (mainContainer)-->
-<div id="heroContent" bind:this={mainContainer} class="flex justify-center items-center gap-5 mx-auto pt-80 relative z-10">
+<div id="heroContent" bind:this={mainContainer} class="flex justify-center items-center gap-5 mx-auto pt-50 relative z-10">
 	<div class="min-w-0 flex justify-end">
 		<!-- Image goes here	-->
 		<img class="w-sm" src={pfp} alt="Korben" />
