@@ -59,11 +59,11 @@
 			<div class="link-block z-10"></div>
 		</div>
 		<div class="relative">
-			<a href="/about" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>About</a>
+			<a href="/projects" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Projects</a>
 			<div class="link-block z-10"></div>
 		</div>
 		<div class="relative">
-			<a href="/projects" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Projects</a>
+			<a href="/experience" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Experience</a>
 			<div class="link-block z-10"></div>
 		</div>
 	</div>
