@@ -13,13 +13,13 @@ let isHovered = false;
 </script>
 
 <a href={href}
-	 class="project"
+	 class="project flex"
 	 on:mouseenter={() => isHovered = true}
 	 on:mouseleave={() => isHovered = false}
 >
-	<div class="border-4 border-zinc-800 hover:border-zinc-200 rounded-lg p-4 pb-0 pl-6 min-h-50 grid grid-rows-4 relative overflow-clip transition-colors duration-150">
+	<div class="grid grid-rows-5 2xl:grid-rows-4 gap-2 grow relative min-h-50 p-4 pl-6 border-4 border-zinc-800 hover:border-zinc-200 rounded-lg overflow-clip transition-colors duration-150">
 		<h2 class="text-3xl font-bold">{title}</h2>
-		<p class="row-span-2 font-medium">
+		<p class="row-span-3 2xl:row-span-2 font-medium">
 			<slot />
 		</p>
 		<div class="flex h-7 gap-4">
