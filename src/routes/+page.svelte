@@ -2,6 +2,7 @@
 	// import pfp image
 	import pfp from '$lib/assets/pfp.jpg';
 	import { onMount } from 'svelte';
+	import ProjectsGrid from '$lib/projectsGrid.svelte';
 
 	// helper function to get the center of an HTMLElement
 	function getCenterOfElement(el: HTMLElement) {
@@ -87,4 +88,8 @@
 	</div>
 </div>
 
-<div id="tsParticles" class="w-full h-screen absolute top-0"></div>
+<div class="py-70" id="projectsWrapper">
+	<ProjectsGrid />
+</div>
+
+<div id="tsParticles" class="w-full h-screen absolute top-0 -z-100"></div>
