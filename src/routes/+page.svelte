@@ -12,19 +12,23 @@
 		return {x: centerX, y: centerY};
 	}
 
-	let mainContainer: HTMLDivElement; // empty variable of HTMLDivElement type that will be assigned a reference using bind:this on the element itself
+	let heroContainer: HTMLDivElement; // empty variable of HTMLDivElement type that will be assigned a reference using bind:this on the element itself
 	const PARALLAX_AMOUNT = 35; // Higher is less movement
 
 	// onMount is a lifecycle hook that schedules a callback function to run as soon as the component (this file in this case) is inserted (mounted) to the DOM.
 	// () => {} is the callback declaration
 	onMount(() => {
+		if (window.matchMedia("(max-width: 768px)").matches){
+			return;
+		}
+
 		// local function that is scoped to this particular component
 		function handleMouseMovement(event: MouseEvent) {
 			const mouseX = event.clientX;
 			const mouseY = event.clientY;
-			const centerCoords = getCenterOfElement(mainContainer);
+			const centerCoords = getCenterOfElement(heroContainer);
 
-			mainContainer.style.transform = `translate(${(centerCoords.x - mouseX) / PARALLAX_AMOUNT}px, ${(centerCoords.y - mouseY) / PARALLAX_AMOUNT}px)`;
+			heroContainer.style.transform = `translate(${(centerCoords.x - mouseX) / PARALLAX_AMOUNT}px, ${(centerCoords.y - mouseY) / PARALLAX_AMOUNT}px)`;
 
 		}
 
@@ -77,12 +81,12 @@
 </style>
 
 <!-- bind:this sets a reference of this DOM element (heroContent div) to the provided variable (mainContainer)-->
-<div id="heroContent" bind:this={mainContainer} class="flex justify-center items-center gap-5 mx-auto pt-50 relative z-10">
-	<div class="min-w-0 flex justify-end">
+<div id="heroContent" bind:this={heroContainer} class="grid grid-cols-1 md:flex md:justify-center md:items-center gap-5 mx-auto pt-50 md:px-15 relative z-10">
+	<div class="min-w-0 flex justify-center md:justify-end">
 		<!-- Image goes here	-->
 		<img class="w-sm" src={pfp} alt="Korben" />
 	</div>
-	<div class="">
+	<div class="mx-auto md:mx-0">
 		<h1 class="text-5xl">Hi, my <br/> name is <span><b>Korben.</b></span></h1>
 		<h2 class="text-4xl">A software developer from <br /><b>New Jersey.</b></h2>
 	</div>
