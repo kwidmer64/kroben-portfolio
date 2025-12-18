@@ -1,3 +1,6 @@
+# !! WORK IN PROGRESS !!
+## This website is not completed yet and not deployed anywhere!
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
