@@ -15,11 +15,11 @@
 	<Project title="Tides" icons={[icons.react, icons.js, icons.nodejs]} href="https://tides.kroben.net/" image={tidesImg}>
 		<p>A simple web app that displays the tides for a specified location.
 			Uses an Azure Function to contact the Maps.co geocoding API.
-			Then gets tide predictions data from the NOAA Tides & Currents API</p>
+			Then gets tide predictions data from the NOAA Tides & Currents API.</p>
 	</Project>
 
 	<Project title="Portfolio" icons={[icons.svelte, icons.ts]} href="/" image={portfolioImg}>
 		<p>My personal portfolio which contains information about me, my projects, and my experience.
-			I eventually would like to experiment with moving some of the data into a database to work on my database skills!</p>
+			Built with Svelte and TypeScript.</p>
 	</Project>
 </div>
