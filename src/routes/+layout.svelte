@@ -35,7 +35,7 @@
         transition: opacity 0.2s;
         height: 30%;
         width: 100%;
-        background-color: #2696e1;
+        background-color: #FFA400;
         position: absolute;
         bottom: 0.25rem;
         left: 0;
