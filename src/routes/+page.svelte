@@ -13,7 +13,7 @@
 	}
 
 	let heroContainer: HTMLDivElement; // empty variable of HTMLDivElement type that will be assigned a reference using bind:this on the element itself
-	const PARALLAX_AMOUNT = 35; // Higher is less movement
+	const PARALLAX_AMOUNT = 75; // Higher is less movement
 
 	// onMount is a lifecycle hook that schedules a callback function to run as soon as the component (this file in this case) is inserted (mounted) to the DOM.
 	// () => {} is the callback declaration
@@ -76,7 +76,7 @@
 
 <style>
 	#heroContent {
-			transition: transform 0.5s ease-out;
+			transition: transform 1s ease-out;
 	}
 </style>
 
@@ -92,7 +92,7 @@
 	</div>
 </div>
 
-<div class="pt-70 pb-10" id="projectsWrapper">
+<div class="mt-70 py-10 bg-zinc-950 border-t-2 border-t-zinc-800" id="projectsWrapper">
 	<ProjectsGrid />
 </div>
 
