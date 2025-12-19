@@ -92,7 +92,7 @@
 	</div>
 </div>
 
-<div class="py-70" id="projectsWrapper">
+<div class="pt-70 pb-10" id="projectsWrapper">
 	<ProjectsGrid />
 </div>
 
