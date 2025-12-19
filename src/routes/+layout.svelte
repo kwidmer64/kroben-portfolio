@@ -82,3 +82,7 @@
 </nav>
 
 {@render children?.()}
+
+<footer class="flex justify-center items-center h-20 bg-zinc-900">
+	Copyright 2025 - Korben Widmer
+</footer>
