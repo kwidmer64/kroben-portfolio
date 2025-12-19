@@ -68,18 +68,6 @@
 				<div class="link-block z-10"></div>
 			</div>
 		</div>
-
-	<!--	<div class="flex items-center justify-center md:hidden px-10">-->
-	<!--		<button onclick={toggleNav} aria-label="Toggle Navigation">-->
-	<!--			<i class="fa-solid fa-bars hover:cursor-pointer"></i>-->
-	<!--		</button>-->
-	<!--		&lt;!&ndash; Mobile Nav Links &ndash;&gt;-->
-	<!--		<div class={`${showNav ? 'flex' : 'hidden'}`}>-->
-	<!--			<a href="/" class="text-neutral-100">Home</a>-->
-	<!--			<a href="/about" class="text-neutral-100">About</a>-->
-	<!--			<a href="/projects" class="text-neutral-100">Projects</a>-->
-	<!--		</div>-->
-	<!--	</div>-->
 	</nav>
 
 	<main class="flex-1">
