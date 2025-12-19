@@ -83,16 +83,15 @@
 <!-- bind:this sets a reference of this DOM element (heroContent div) to the provided variable (mainContainer)-->
 <div id="heroContent" bind:this={heroContainer} class="grid grid-cols-1 md:flex md:justify-center md:items-center gap-5 mx-auto pt-50 md:px-15 relative z-10">
 	<div class="min-w-0 flex justify-center md:justify-end">
-		<!-- Image goes here	-->
 		<img class="w-sm" src={pfp} alt="Korben" />
 	</div>
 	<div class="mx-auto md:mx-0">
-		<h1 class="text-5xl">Hi, my <br/> name is <span><b>Korben.</b></span></h1>
-		<h2 class="text-4xl">A software developer from <br /><b>New Jersey.</b></h2>
+		<h1 class="text-5xl text-zinc-300">Hi, my <br/> name is <span><b class="text-[#FFA400]">Korben.</b></span></h1>
+		<h2 class="text-4xl text-zinc-300">A software developer from <br /><b class="text-[#FFA400]">New Jersey.</b></h2>
 	</div>
 </div>
 
-<div class="mt-70 py-10 bg-zinc-950 border-t-2 border-t-zinc-800" id="projectsWrapper">
+<div class="mt-70 py-10 bg-zinc-950/75 border-t-2 border-t-zinc-800" id="projectsWrapper">
 	<ProjectsGrid />
 </div>
 
