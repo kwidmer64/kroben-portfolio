@@ -13,13 +13,13 @@ let isHovered = false;
 </script>
 
 <a href={href}
-	 class="project flex hover:-translate-y-2 transition-transform duration-150"
+	 class="project flex hover:-translate-y-1 transition-transform duration-250"
 	 on:mouseenter={() => isHovered = true}
 	 on:mouseleave={() => isHovered = false}
 >
-	<div class="grid grid-rows-5 2xl:grid-rows-4 gap-2 grow relative min-h-50 p-4 pl-6 border-4 border-zinc-800 hover:border-[#FFA400] rounded-lg overflow-clip z-0 transition-colors duration-150 hover:shadow-lg/25 shadow-[#FFA400]">
-		<h2 class="text-3xl font-bold">{title}</h2>
-		<p class="row-span-3 2xl:row-span-2 font-medium">
+	<div class="grid grid-rows-5 2xl:grid-rows-4 gap-2 grow relative min-h-50 p-4 pl-6 border-2 border-zinc-800 hover:border-[#FFA400] hover:bg-[#FFA400] rounded-lg overflow-clip z-0 transition-all duration-250 hover:shadow-lg/25 shadow-[#FFA400]">
+		<h2 class="text-3xl font-bold text-zinc-100">{title}</h2>
+		<p class="row-span-3 2xl:row-span-2 font-medium text-zinc-400">
 			<slot />
 		</p>
 		<div class="flex h-7 gap-4">
@@ -28,6 +28,6 @@ let isHovered = false;
 			{/each}
 		</div>
 
-		<img src={image} alt="Tide prediction website" class="absolute left-0 w-full h-full object-cover -z-1 scale-110 md:scale-125 blur-sm brightness-50 {isHovered ? 'grayscale-0' : 'grayscale-75'}"/>
+		<img src={image} alt="Tide prediction website" class="absolute left-0 w-full h-full object-cover -z-1 scale-110 md:scale-125 blur-sm {isHovered ? 'brightness-30' : 'brightness-15'} grayscale-100"/>
 	</div>
 </a>
