@@ -17,7 +17,7 @@ let isHovered = false;
 	 on:mouseenter={() => isHovered = true}
 	 on:mouseleave={() => isHovered = false}
 >
-	<div class="grid grid-rows-5 2xl:grid-rows-4 gap-2 grow relative min-h-50 p-4 pl-6 border-4 border-zinc-800 hover:border-zinc-200 rounded-lg overflow-clip transition-colors duration-150 hover:shadow-lg/25 shadow-amber-50">
+	<div class="grid grid-rows-5 2xl:grid-rows-4 gap-2 grow relative min-h-50 p-4 pl-6 border-4 border-zinc-800 hover:border-zinc-200 rounded-lg overflow-clip z-0 transition-colors duration-150 hover:shadow-lg/25 shadow-amber-50">
 		<h2 class="text-3xl font-bold">{title}</h2>
 		<p class="row-span-3 2xl:row-span-2 font-medium">
 			<slot />
