@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import ProjectsGrid from '$lib/projectsGrid.svelte';
 	import ExperienceGrid from '$lib/experienceGrid.svelte';
+	import EducationGrid from '$lib/educationGrid.svelte';
 
 	// helper function to get the center of an HTMLElement
 	function getCenterOfElement(el: HTMLElement) {
@@ -98,6 +99,10 @@
 
 <div class="py-10 bg-zinc-950/75 border-t-2 border-t-zinc-800" id="experienceWrapper">
 	<ExperienceGrid />
+</div>
+
+<div class="py-10 bg-zinc-950/75 border-t-2 border-t-zinc-800" id="experienceWrapper">
+	<EducationGrid />
 </div>
 
 <div id="tsParticles" class="w-full h-screen absolute top-0 -z-100"></div>
