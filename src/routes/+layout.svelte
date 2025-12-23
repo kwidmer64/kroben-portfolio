@@ -74,7 +74,16 @@
 		{@render children?.()}
 	</main>
 
-	<footer class="flex justify-center items-center h-20 bg-zinc-900 bottom-0 left-0 right-0 relative">
-		Copyright 2025 - Korben Widmer
+	<footer class="flex flex-col justify-center items-center gap-2 h-20 bg-zinc-900 text-zinc-500 bottom-0 left-0 right-0 relative">
+		<ul class="flex gap-4 underline decoration-dotted">
+			<li>
+				<a href="https://github.com/kwidmer64">GitHub</a>
+			</li>
+			<li>
+				<a href="https://linkedin.com/in/kwidmer">LinkedIn</a>
+			</li>
+		</ul>
+
+		<p class="text-sm">Developed by Korben Widmer - Copyright 2025 - All Rights Reserved</p>
 	</footer>
 </div>
