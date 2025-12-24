@@ -3,6 +3,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import '@fontsource/montserrat';
 	import '@fortawesome/fontawesome-free/css/all.min.css'
+	import { onMount } from 'svelte';
 
 	let { children } = $props();
 
@@ -16,12 +17,25 @@
 		}
 	}
 
-	// MOBILE NAVBAR
-	// let showNav: boolean = false;
-	//
-	// function toggleNav() {
-	// 	showNav = !showNav;
-	// }
+	onMount(() => {
+		let navBar: HTMLElement | null = document.querySelector("nav");
+
+		// function to run on scroll
+		function handleScroll() {
+			let scrollHeight = window.scrollY;
+
+			if (!navBar) return; // return if navbar is null
+
+			if (scrollHeight > navBar.clientHeight) {
+				navBar.classList.add("bg-zinc-950/90");
+			} else {
+				navBar.classList.remove("bg-zinc-950/90");
+			}
+		}
+
+		document.addEventListener("scroll", handleScroll);
+	});
+
 </script>
 
 <style>
@@ -51,10 +65,10 @@
 <!--</svelte:head>-->
 
 <div class="flex flex-col min-h-[100vh]">
-	<nav class="h-20 flex justify-between relative top-0 z-10">
-		<a href="/" class="w-1/2 text-3xl font-bold h-full flex items-center justify-start pl-7 lg:pl-20">KW</a>
+	<nav class="h-20 flex justify-between sticky top-0 px-20 md:px-40 lg:px-25 xl:px-60 z-100 transition-all duration-500">
+		<a href="/" class="w-1/2 text-3xl font-bold h-full flex items-center justify-start">KW</a>
 		<!-- Desktop Nav -->
-		<div class="w-4xl flex justify-around items-center z-0">
+		<div class="w-4xl flex justify-between items-center z-0">
 			<div class="relative">
 				<a href="/" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Home</a>
 				<div class="link-block z-10"></div>
