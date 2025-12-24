@@ -35,7 +35,6 @@
 
 		document.addEventListener("scroll", handleScroll);
 	});
-
 </script>
 
 <style>
@@ -65,7 +64,7 @@
 <!--</svelte:head>-->
 
 <div class="flex flex-col min-h-[100vh]">
-	<nav class="h-20 flex justify-between sticky top-0 px-20 md:px-40 lg:px-25 xl:px-60 z-100 transition-all duration-500">
+	<nav class="h-20 flex justify-between sticky top-0 px-10 md:px-40 lg:px-25 xl:px-60 z-100 transition-all duration-500">
 		<a href="/" class="w-1/2 text-3xl font-bold h-full flex items-center justify-start">KW</a>
 		<!-- Desktop Nav -->
 		<div class="w-4xl flex justify-between items-center z-0">
@@ -73,12 +72,19 @@
 				<a href="/" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Home</a>
 				<div class="link-block z-10"></div>
 			</div>
+
 			<div class="relative">
-				<a href="/projects" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Projects</a>
+				<a href="#projectsWrapper" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Projects</a>
 				<div class="link-block z-10"></div>
 			</div>
+
 			<div class="relative">
-				<a href="/experience" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Experience</a>
+				<a href="#experienceWrapper" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Experience</a>
+				<div class="link-block z-10"></div>
+			</div>
+
+			<div class="relative">
+				<a href="#educationWrapper" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Education</a>
 				<div class="link-block z-10"></div>
 			</div>
 		</div>
