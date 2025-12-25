@@ -83,7 +83,7 @@
 </style>
 
 <!-- bind:this sets a reference of this DOM element (heroContent div) to the provided variable (mainContainer)-->
-<div id="heroContent" bind:this={heroContainer} class="grid grid-cols-1 md:flex md:justify-center md:items-center gap-5 mx-auto pt-50 px-10 md:px-15 relative z-10">
+<div id="heroContent" bind:this={heroContainer} class="grid grid-cols-1 md:flex md:justify-center md:items-center gap-5 mx-auto px-10 md:px-15 py-25 md:py-80 relative z-10">
 	<div class="min-w-0 flex justify-center md:justify-end">
 		<img class="max-w-sm w-full" src={pfp} alt="Korben" />
 	</div>
@@ -93,7 +93,7 @@
 	</div>
 </div>
 
-<div class="mt-70 py-10 bg-zinc-950/75 border-t-2 border-t-zinc-800" id="projectsWrapper">
+<div class="py-10 bg-zinc-950/75 border-t-2 border-t-zinc-800" id="projectsWrapper">
 	<ProjectsGrid />
 </div>
 
