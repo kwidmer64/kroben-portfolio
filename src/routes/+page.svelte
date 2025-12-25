@@ -93,6 +93,14 @@
 	</div>
 </div>
 
+<!--TODO: add blurb about the domain being a misspelled version of my name-->
+
+<!--TODO: Fix grids from adding extra space in the descriptions-->
+
+<!--TODO: Add logo and favicon-->
+
+<!--TODO: Relax padding on all components from 10 to something less-->
+
 <div class="py-10 bg-zinc-950/75 border-t-2 border-t-zinc-800" id="projectsWrapper">
 	<ProjectsGrid />
 </div>
