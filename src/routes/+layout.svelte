@@ -67,7 +67,7 @@
 <!--</svelte:head>-->
 
 <div class="flex flex-col min-h-[100vh]">
-	<nav class="h-20 flex justify-start md:justify-between gap-4 md:gap-0 sticky top-0 px-7 sm:px-10 md:px-40 lg:px-25 xl:px-60 z-100 transition-all duration-500 {mobileNavClicked ? 'bg-zinc-950/90' : ''}">
+	<nav class="h-20 flex justify-start md:justify-between gap-4 md:gap-0 sticky top-0 px-10 md:px-40 lg:px-25 xl:px-60 z-100 transition-all duration-500 {mobileNavClicked ? 'bg-zinc-950/90' : ''}">
 		<!-- Mobile Nav Hamburger Icon -->
 		<div class="flex justify-start self-center md:hidden z-0 text-3xl font-bold">
 			<button onclick={() => mobileNavClicked = !mobileNavClicked}>☰</button>
