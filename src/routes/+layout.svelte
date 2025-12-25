@@ -35,6 +35,9 @@
 
 		document.addEventListener("scroll", handleScroll);
 	});
+
+	// mobile navbar hamburger icon click
+	let mobileNavClicked: boolean = $state(false);
 </script>
 
 <style>
@@ -64,10 +67,15 @@
 <!--</svelte:head>-->
 
 <div class="flex flex-col min-h-[100vh]">
-	<nav class="h-20 flex justify-between sticky top-0 px-10 md:px-40 lg:px-25 xl:px-60 z-100 transition-all duration-500">
-		<a href="/" class="w-1/2 text-3xl font-bold h-full flex items-center justify-start">KW</a>
+	<nav class="h-20 flex justify-start md:justify-between gap-4 md:gap-0 sticky top-0 px-7 sm:px-10 md:px-40 lg:px-25 xl:px-60 z-100 transition-all duration-500 {mobileNavClicked ? 'bg-zinc-950/90' : ''}">
+		<!-- Mobile Nav Hamburger Icon -->
+		<div class="flex justify-start self-center md:hidden z-0 text-3xl font-bold">
+			<button onclick={() => mobileNavClicked = !mobileNavClicked}>☰</button>
+		</div>
+
+		<a href="/" class="md:w-1/2 text-3xl font-bold h-full flex items-center justify-start">KW</a>
 		<!-- Desktop Nav -->
-		<div class="w-4xl flex justify-between items-center z-0">
+		<div class="hidden md:flex w-4xl justify-between items-center z-0">
 			<div class="relative">
 				<a href="/" class="text-neutral-100 z-20 relative" onmouseenter={handleNavHover} onmouseleave={handleNavHover}>Home</a>
 				<div class="link-block z-10"></div>
@@ -89,6 +97,25 @@
 			</div>
 		</div>
 	</nav>
+
+	<!-- Mobile Nav -->
+	<div class="grid grid-rows-4 md:hidden px-10 fixed top-20 left-0 right-0 sm:right-1/2 bottom-0 z-100 bg-zinc-950 transition-transform duration-250 {mobileNavClicked ? 'translate-x-0' : '-translate-x-1/1'}" id="mobileNav">
+		<div class="relative my-auto">
+			<a href="/" class="text-neutral-100 z-20 relative" onclick={() => mobileNavClicked = false}>Home</a>
+		</div>
+
+		<div class="relative my-auto">
+			<a href="#projectsWrapper" class="text-neutral-100 z-20 relative" onclick={() => mobileNavClicked = false}>Projects</a>
+		</div>
+
+		<div class="relative my-auto">
+			<a href="#experienceWrapper" class="text-neutral-100 z-20 relative" onclick={() => mobileNavClicked = false}>Experience</a>
+		</div>
+
+		<div class="relative my-auto">
+			<a href="#educationWrapper" class="text-neutral-100 z-20 relative" onclick={() => mobileNavClicked = false}>Education</a>
+		</div>
+	</div>
 
 	<main class="flex-1">
 		{@render children?.()}
