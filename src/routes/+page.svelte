@@ -101,7 +101,7 @@
 	<ExperienceGrid />
 </div>
 
-<div class="py-10 bg-zinc-950/75 border-t-2 border-t-zinc-800" id="experienceWrapper">
+<div class="py-10 bg-zinc-950/75 border-t-2 border-t-zinc-800" id="educationWrapper">
 	<EducationGrid />
 </div>
 
