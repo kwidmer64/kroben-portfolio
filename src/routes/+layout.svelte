@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/kroben-favicon.png';
 	import '@fontsource/montserrat';
 	import '@fortawesome/fontawesome-free/css/all.min.css'
 	import { onMount } from 'svelte';
@@ -62,9 +62,9 @@
     }
 </style>
 
-<!--<svelte:head>-->
-<!--	<link rel="icon" href={favicon} />-->
-<!--</svelte:head>-->
+<svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
 
 <div class="flex flex-col min-h-[100vh]">
 	<nav class="h-20 flex justify-start md:justify-between gap-4 md:gap-0 sticky top-0 px-10 md:px-40 lg:px-25 xl:px-60 z-100 transition-all duration-500 {mobileNavClicked ? 'bg-zinc-950/90' : ''}">
