@@ -64,6 +64,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Korben Widmer</title>
 </svelte:head>
 
 <div class="flex flex-col min-h-[100vh]">
