@@ -40,5 +40,8 @@
 		"@fortawesome/fontawesome-free": "^7.0.1",
 		"@tsparticles/engine": "^3.9.1",
 		"@tsparticles/preset-stars": "^3.2.0"
+	},
+	"engines": {
+		"node": ">=20.19.0"
 	}
 }
