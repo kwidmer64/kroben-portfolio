@@ -5,21 +5,23 @@ import Experience from './experienceIndividual.svelte';
 <div class="flex flex-col lg:grid lg:grid-cols-1 px-10 md:px-40 lg:px-25 xl:px-60 gap-4 h-full">
 	<h1 class="text-5xl font-bold mb-6">Experience</h1>
 
-	<Experience title="Events A/V Student Worker" company="Grand Canyon University" skills={['Dante']} start=" August 2025" end="Present">
-		<p>Set up and struck audio and lighting systems for GCU Arena events, including chapels, concerts, and athletics.
-			Mixed live audio, managed SMIs, and coordinated with event staff to ensure smooth A/V operations.
-			Spotlight operation for NCAA Division I athletic events</p>
+	<Experience title="AI-Assisted Developer Intern" company="TownBackyard" skills={['ASP.NET', 'HTML/CSS', 'SASS', 'Git', 'Agentic AI Development']} start="May 2026" end="Present">
+		<p>Redesigned the front end of townbackyard.com (ASP.NET), including an in-progress migration of the site’s styling
+			from CSS to SASS for improved maintainability.
+			Evaluated AI coding agents (Claude Code, OpenAI Codex) against traditional workflows to guide their use on the
+			redesign.</p>
 	</Experience>
 
-	<Experience title="Contract Audio Engineer" company="Cornerstone Church" skills={['Dante', 'Audio Mixing', 'Midas M32', 'Waves SoundGrid']} start="March 2025" end="Present">
-		<p>Set up and struck audio and lighting systems for GCU Arena events, including chapels, concerts, and athletics. Mixed live audio, managed SMIs, and coordinated with event staff to ensure smooth A/V operations. Spotlight operation for NCAA Division I athletic events</p>
+	<Experience title="A/V Student Technician" company="Grand Canyon University" skills={['Dante', 'Audio Mixing']} start="August 2025" end="Present">
+		<p>Set up and struck audio, lighting, and video systems for university events, ensuring smooth on-site operation.
+			Trained incoming staff ahead of the 2026 school year</p>
 	</Experience>
 
-	<Experience title="AVL Tech" company="Hume Lake Christian Camps" skills={['Dante', 'Audio Mixing', 'Allen & Heath Avantis', 'QLab Programming']} start=" May 2025" end="August 2025">
-		<p>Mixed live audio for daily skits and presentations, edited recordings, configured wireless audio gear. Troubleshot MIDI, QLab, ProPresenter, and Chroma-Q Vista systems, and managed Dante audio devices for seamless performances.</p>
-	</Experience>
-
-	<Experience title="Production Sound Tech" company="Hume Lake Christian Camps" skills={['Dante', 'Audio Mixing', 'Roland M5000']} start=" May 2024" end="August 2024">
-		<p>Mixed live audio for daily skits and sermons, configured wireless audio and networking gear. Communicated with the camp director to ensure audio requirements for the camp are fulfilled</p>
+	<Experience title="AVL Tech" company="Hume Lake Christian Camps" skills={['Dante', 'Audio Mixing', 'Show Control Programming', 'Team Management']} start=" May 2026" end="August 2026">
+		<p>Mixed live audio and operated QLab, ProPresenter, Chroma-Q Vista, and Dante networked devices for daily chapel
+			programs.
+			Programmed a custom show-control automation setup using the Bitfocus Companion platform.
+			Led the production team for the middle school camp, coordinating directly with camp directors to meet technical
+			requirements.</p>
 	</Experience>
 </div>
